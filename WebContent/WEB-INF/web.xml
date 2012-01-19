@@ -22,4 +22,13 @@
 		<url-pattern>/hello.jsp</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>counter</servlet-name>
+		<jsp-file>/Resources/jsp/counter.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>counter</servlet-name>
+		<url-pattern>/counter.jsp</url-pattern>
+	</servlet-mapping>
+
 </web-app>
