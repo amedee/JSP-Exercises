@@ -31,4 +31,13 @@
 		<url-pattern>/counter.jsp</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>colorMe</servlet-name>
+		<jsp-file>/Resources/jsp/colorMe.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>colorMe</servlet-name>
+		<url-pattern>/colorMe.jsp</url-pattern>
+	</servlet-mapping>
+
 </web-app>
