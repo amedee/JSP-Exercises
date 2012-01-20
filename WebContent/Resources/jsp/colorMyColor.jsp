@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<jsp:useBean id="background" class="beans.RandomColorBean" scope="page" />
-<jsp:useBean id="foreground" class="beans.RandomColorBean" scope="page" />
+<jsp:useBean id="background" class="beans.ColorBean" scope="page" />
+<jsp:useBean id="foreground" class="beans.ColorBean" scope="page" />
 <!DOCTYPE html>
 <html>
 <head>

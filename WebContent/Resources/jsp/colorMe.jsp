@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<jsp:useBean id="background" class="beans.RandomColorBean" scope="page" />
+<jsp:useBean id="background" class="beans.ColorBean" scope="page" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +18,6 @@ body {
 <body>
 	<h1>
 		Random background color =
-		<jsp:getProperty name="background" property="colorName" /></h1>
+		<jsp:getProperty name="background" property="colorByName" /></h1>
 </body>
 </html>
