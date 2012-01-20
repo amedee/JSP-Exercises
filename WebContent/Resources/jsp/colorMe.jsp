@@ -6,7 +6,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Color Me</title>
-</head>
 <style>
 body {
 	background-color: rgb(
@@ -15,6 +14,7 @@ body {
 		<jsp:getProperty name="background" property="blue" />);
 }
 </style>
+</head>
 <body>
 	<h1>
 		Random background color =
