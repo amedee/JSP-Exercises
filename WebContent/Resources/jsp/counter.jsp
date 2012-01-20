@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<jsp:useBean id="pageCounter" class="beans.AccessCountBean" scope="page"></jsp:useBean>
+<jsp:useBean id="requestCounter" class="beans.AccessCountBean" scope="request"></jsp:useBean>
+<jsp:useBean id="sessionCounter" class="beans.AccessCountBean" scope="session"></jsp:useBean>
+<jsp:useBean id="applicationCounter" class="beans.AccessCountBean" scope="application"></jsp:useBean>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,58 +12,34 @@
 </head>
 <body>
 	<h1>Scopes</h1>
-	
-	<%
-		// tweede mogelijke oplossing, met PageContext.PAGE_SCOPE/.REQUEST_SCOPE/.SESSION_SCOPE/.APPLICATION_SCOPE
-		Integer pageCounter = (Integer) pageContext.getAttribute("pageCounter", PageContext.PAGE_SCOPE);
-		if (pageCounter == null || pageCounter == 0) {
-			pageCounter = 1;
-		} else {
-			pageCounter += 1;
-		}
-		pageContext.setAttribute("pageCounter", pageCounter, PageContext.PAGE_SCOPE);
-
-		Integer requestCounter = (Integer) pageContext.getAttribute("requestCounter", PageContext.REQUEST_SCOPE);
-		if (requestCounter == null || requestCounter == 0) {
-			requestCounter = 1;
-		} else {
-			requestCounter += 1;
-		}
-		pageContext.setAttribute("requestCounter", requestCounter, PageContext.REQUEST_SCOPE);
-
-		Integer sessionCounter = (Integer) pageContext.getAttribute("sessionCounter", PageContext.SESSION_SCOPE);
-		if (sessionCounter == null || sessionCounter == 0) {
-			sessionCounter = 1;
-		} else {
-			sessionCounter += 1;
-		}
-		pageContext.setAttribute("sessionCounter",	sessionCounter, PageContext.SESSION_SCOPE);
-
-		Integer applicationCounter = (Integer) pageContext.getAttribute("applicationCounter", PageContext.APPLICATION_SCOPE);
-		if (applicationCounter == null || applicationCounter == 0) {
-			applicationCounter = 1;
-		} else {
-			applicationCounter += 1;
-		}
-		pageContext.setAttribute("applicationCounter", applicationCounter, PageContext.APPLICATION_SCOPE);
-	%>
-	
 	<table>
 		<tr>
 			<td>Page:</td>
-			<td><%=pageCounter%></td>
+			<td><jsp:getProperty name="pageCounter" property="accessCount" />
+				<%
+					pageCounter.incrementAccessCount();
+				%></td>
 		</tr>
 		<tr>
 			<td>Request:</td>
-			<td><%=requestCounter%></td>
+			<td><jsp:getProperty name="requestCounter" property="accessCount" />
+			<%
+ 				requestCounter.incrementAccessCount();
+ 			%></td>
 		</tr>
 		<tr>
 			<td>Session:</td>
-			<td><%=sessionCounter%></td>
+			<td><jsp:getProperty name="sessionCounter" property="accessCount" />
+			<%
+ 				sessionCounter.incrementAccessCount();
+ 			%></td>
 		</tr>
 		<tr>
-			<td>Application</td>
-			<td><%=applicationCounter%></td>
+			<td>Application:</td>
+			<td><jsp:getProperty name="applicationCounter" property="accessCount" />
+			<%
+ 				applicationCounter.incrementAccessCount();
+ 			%></td>
 		</tr>
 	</table>
 </body>
