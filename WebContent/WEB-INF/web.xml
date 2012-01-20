@@ -40,4 +40,13 @@
 		<url-pattern>/colorMe.jsp</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>colorMyColor</servlet-name>
+		<jsp-file>/Resources/jsp/colorMyColor.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>colorMyColor</servlet-name>
+		<url-pattern>/colorMyColor.jsp</url-pattern>
+	</servlet-mapping>
+
 </web-app>
