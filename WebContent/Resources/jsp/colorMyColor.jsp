@@ -13,6 +13,10 @@ body {
 		<jsp:getProperty name="background" property="red" />,
 		<jsp:getProperty name="background" property="green" />,
 		<jsp:getProperty name="background" property="blue" />);
+	color: rgb(
+		<jsp:getProperty name="foreground" property="red" />,
+		<jsp:getProperty name="foreground" property="green" />,
+		<jsp:getProperty name="foreground" property="blue" />);
 }
 </style>
 </head>
