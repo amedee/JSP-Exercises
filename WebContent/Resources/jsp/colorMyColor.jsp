@@ -1,14 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<jsp:useBean id="background" class="beans.ColorBean" scope="page" />
-<jsp:useBean id="foreground" class="beans.ColorBean" scope="page" />
+<jsp:useBean id="background" class="beans.ColorBean" scope="session" />
+<jsp:useBean id="foreground" class="beans.ColorBean" scope="session" />
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Color My Color</title>
+<style>
+body {
+	background-color: rgb(
+		<jsp:getProperty name="background" property="red" />,
+		<jsp:getProperty name="background" property="green" />,
+		<jsp:getProperty name="background" property="blue" />);
+}
+</style>
 </head>
 <body>
+
+<p>
+Chosen background: <jsp:getProperty name="background" property="colorByName" /><br>
+Chosen foreground: <jsp:getProperty name="foreground" property="colorByName" /><br>
+</p>
+
 	<form method="post">
 		Background : <input type=radio name=bckgrnd value="Red" checked>Red
 		- <input type=radio name=bckgrnd value="Blue">Blue - <input
