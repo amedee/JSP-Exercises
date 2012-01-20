@@ -24,17 +24,19 @@ body {
 
 <p>
 Chosen background: <jsp:getProperty name="background" property="colorByName" /><br>
-Chosen foreground: <jsp:getProperty name="foreground" property="colorByName" /><br>
+Chosen fontcolor: <jsp:getProperty name="foreground" property="colorByName" /><br>
 </p>
 
 	<form method="post">
-		Background : <input type=radio name=bckgrnd value="Red" checked>Red
-		- <input type=radio name=bckgrnd value="Blue">Blue - <input
-			type=radio name=bckgrnd value="Green">Green<br /> FontColor
-		: <input type=radio name=font value="White" checked>White - <input
-			type=radio name=font value="Yellow">Yellow - <input
-			type=radio name=font value="Pink">Pink<br /> <input
-			type=submit value="Color Me">
+		Background: 
+			<input type="radio" name="bckgrnd" value="Red" checked>Red - 
+			<input type="radio" name="bckgrnd" value="Blue">Blue - 
+			<input type="radio" name="bckgrnd" value="Green">Green<br />
+		Fontcolor: 
+			<input type="radio" name="font" value="White" checked>White - 
+			<input type="radio" name="font" value="Yellow">Yellow - 
+			<input type="radio" name="font" value="Pink">Pink<br /> 
+		<input type="submit" value="Color Me">
 	</form>
 </body>
 </html>
