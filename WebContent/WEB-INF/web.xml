@@ -49,4 +49,13 @@
 		<url-pattern>/colorMyColor.jsp</url-pattern>
 	</servlet-mapping>
 
+	<servlet>
+		<servlet-name>cookiefyMyColor</servlet-name>
+		<jsp-file>/Resources/jsp/cookiefyMyColor.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cookiefyMyColor</servlet-name>
+		<url-pattern>/cookiefyMyColor.jsp</url-pattern>
+	</servlet-mapping>
+
 </web-app>
