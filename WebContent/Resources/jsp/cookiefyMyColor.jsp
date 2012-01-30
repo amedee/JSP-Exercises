@@ -38,6 +38,7 @@ Chosen fontcolor: <jsp:getProperty name="foreground" property="colorByName" /><b
 			<input type="radio" name="font" value="Yellow">Yellow - 
 			<input type="radio" name="font" value="Pink">Pink<br /> 
 		<input type="submit" value="Color Me">
+		<input type="submit" value="Save Prefs">
 	</form>
 </body>
 </html>
