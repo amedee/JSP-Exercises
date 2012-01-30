@@ -8,12 +8,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
-public class RandomColorBean {
+public class ColorBean {
 
 	private Color color;
 	private Map<Color, String> colorMap;
 
-	public RandomColorBean() {
+	public ColorBean() {
 		init();
 	}
 
@@ -42,16 +42,27 @@ public class RandomColorBean {
 	public int getRed() {
 		return color.getRed();
 	}
-	
+
 	public int getGreen() {
 		return color.getGreen();
 	}
-	
+
 	public int getBlue() {
 		return color.getBlue();
 	}
 
-	public String getColorName() {
+	public String getColorByName() {
 		return colorMap.get(color).toLowerCase();
+	}
+
+	public void setColorByName(String colorName) {
+		Field field;
+		try {
+			field = Class.forName("java.awt.Color").getField(
+					colorName.toUpperCase());
+			this.color = (Color) field.get(null);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }
