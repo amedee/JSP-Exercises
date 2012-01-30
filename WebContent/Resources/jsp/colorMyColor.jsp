@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%-- Same ColorBean as in colorMe.jsp --%>
 <jsp:useBean id="background" class="beans.ColorBean" scope="session" />
 <jsp:useBean id="foreground" class="beans.ColorBean" scope="session" />
+<jsp:setProperty name="background" property="colorByName" param="bckgrnd"/>
+<jsp:setProperty name="foreground" property="colorByName" param="font"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,12 +24,10 @@ body {
 </style>
 </head>
 <body>
-
 <p>
 Chosen background: <jsp:getProperty name="background" property="colorByName" /><br>
 Chosen fontcolor: <jsp:getProperty name="foreground" property="colorByName" /><br>
 </p>
-
 	<form method="post">
 		Background: 
 			<input type="radio" name="bckgrnd" value="Red" checked>Red - 
