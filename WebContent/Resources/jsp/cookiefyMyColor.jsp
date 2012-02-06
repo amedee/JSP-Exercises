@@ -45,20 +45,14 @@
 <title>Cookiefy My Color</title>
 <style>
 body {
-	background-color: rgb(<       jsp :       getProperty name =       "background" property =
-		    
-		 "red"/ >, <       jsp :   
-		   getProperty name =       "background" property =       "green"/ >,
-		<     
-		 jsp :   
-		   getProperty name =       "background" property =       "blue"/ >);
-	color: rgb(<       jsp :       getProperty name =       "foreground" property =
-		    
-		 "red"/ >, <       jsp :   
-		   getProperty name =       "foreground" property =       "green"/ >,
-		<     
-		 jsp :   
-		   getProperty name =       "foreground" property =       "blue"/ >);
+	background-color: rgb(
+		<jsp:getProperty name="background" property="red"   />,
+		<jsp:getProperty name="background" property="green" />,
+		<jsp:getProperty name="background" property="blue"  />);
+	color: rgb(
+		<jsp:getProperty name="foreground" property="red"   />,
+		<jsp:getProperty name="foreground" property="green" />,
+		<jsp:getProperty name="foreground" property="blue"  />);
 }
 </style>
 </head>
@@ -70,14 +64,20 @@ body {
 		<jsp:getProperty name="foreground" property="colorByName" /><br>
 	</p>
 	<form method="post">
-		Background: <input type="radio" name="bckgrnd" value="Red" checked>Red
-		- <input type="radio" name="bckgrnd" value="Blue">Blue - <input
-			type="radio" name="bckgrnd" value="Green">Green<br />
-		Fontcolor: <input type="radio" name="font" value="White" checked>White
-		- <input type="radio" name="font" value="Yellow">Yellow - <input
-			type="radio" name="font" value="Pink">Pink<br /> <input
-			type="submit" value="Color Me"> <input type="submit"
-			value="Save Prefs">
+		Background: 
+		<input type="radio" name="bckgrnd" value="Red" checked>Red
+		- 
+		<input type="radio" name="bckgrnd" value="Blue">Blue
+		- 
+		<input type="radio" name="bckgrnd" value="Green">Green<br />
+		Fontcolor: 
+		<input type="radio" name="font" value="White" checked>White
+		- 
+		<input type="radio" name="font" value="Yellow">Yellow 
+		- 
+		<inputtype="radio" name="font" value="Pink">Pink<br /> 
+		<input type="submit" value="Color Me"> 
+		<input type="submit" value="Save Prefs">
 	</form>
 </body>
 </html>
