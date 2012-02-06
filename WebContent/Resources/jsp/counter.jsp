@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<jsp:useBean id="pageCounter" class="beans.AccessCountBean" scope="page"></jsp:useBean>
-<jsp:useBean id="requestCounter" class="beans.AccessCountBean" scope="request"></jsp:useBean>
-<jsp:useBean id="sessionCounter" class="beans.AccessCountBean" scope="session"></jsp:useBean>
-<jsp:useBean id="applicationCounter" class="beans.AccessCountBean" scope="application"></jsp:useBean>
+<jsp:useBean id="pageCounter" class="beans.AccessCountBean" scope="page" />
+<jsp:useBean id="requestCounter" class="beans.AccessCountBean" scope="request" />
+<jsp:useBean id="sessionCounter" class="beans.AccessCountBean" scope="session" />
+<jsp:useBean id="applicationCounter" class="beans.AccessCountBean" scope="application" />
 <!DOCTYPE html>
 <html>
 <head>
